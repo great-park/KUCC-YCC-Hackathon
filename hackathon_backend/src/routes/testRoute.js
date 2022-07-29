@@ -12,4 +12,16 @@ module.exports = function (app) {
 
   // 유저 정보 조회
   app.get("/users", test.getUser);
+
+  app.get("/main", function (req, res) {
+    res.sendFile(__dirname + "/pactice.html");
+  });
+
+  app.get("/style.css", function (req, res) {
+    res.sendFile(__dirname + "/style.css");
+  });
+
+  app.get("/check.js", function (req, res) {
+    res.sendFile(__dirname + "/check.js");
+  });
 };
