@@ -1,0 +1,23 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = "mysql://park:fa1735fa!!@runnerbe.c0ewkxiorgu8.ap-northeast-2.rds.amazonaws.com:3306/hackathon"
+}
+
+model Keyword {
+  id      Int     @id @unique(map: "Keyword_id_uindex") @default(autoincrement())
+  keyword String? @db.VarChar(50)
+  userId  Int?
+  User    User?   @relation(fields: [userId], references: [userId], onDelete: NoAction, onUpdate: NoAction, map: "Keyword_User_userId_fk")
+
+  @@index([userId], map: "Keyword_User_userId_fk")
+}
+
+model User {
+  userId  Int       @id @default(autoincrement())
+  email   String?   @db.VarChar(30)
+  Keyword Keyword[]
+}
