@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Unitify</title>
+  </head>
+  <body>
+    <div class="img"></div>
+    <div class="container box-container" style="max-width: 900px">
+      <h1 class="display-1">Unitify</h1>
+      <br />
+      <p style="font-size: 20px;">
+        여기에서 원하는 항목의 공지 알림메일을 받을 수 있습니다.
+      </p>
+      <hr>
+      <div class="row">
+        <div class="col-3">
+          <table class="table table-striped rounding">
+            <tr>
+              <td>학점교류</td>
+            </tr>
+            <tr>
+              <td>등록금</td>
+            </tr>
+            <tr>
+              <td>전공</td>
+            </tr>
+            <tr>
+              <td>졸업</td>
+            </tr>
+            <tr>
+              <td>셔틀버스</td>
+            </tr>
+            <tr>
+              <td>수강</td>
+            </tr>
+          </table>
+        </div>
+        <div class="col-9">          
+          <form method="post">
+            <div class="checkbox form-check row">
+              <label class="form-check-label col-3 col-md-2">
+              <input class="form-check-input" type="checkbox" name="keyword" value="학점교류" /> 학점교류</label>
+              <label class="form-check-label col-3 col-md-2"><input class="form-check-input" type="checkbox" name="keyword" value="등록금" /> 등록금</label>
+              <label class="form-check-label col-3 col-md-2"><input class="form-check-input" type="checkbox" name="keyword" value="전공" /> 전공</label>
+              <label class="form-check-label col-3 col-md-2"><input class="form-check-input" type="checkbox" name="keyword" value="졸업" /> 졸업</label>
+              <label class="form-check-label col-3 col-md-2"><input class="form-check-input" type="checkbox" name="keyword" value="셔틀버스" /> 셔틀버스</label>
+              <label class="form-check-label col-3 col-md-2"><input class="form-check-input" type="checkbox" name="keyword" value="수강" /> 수강</label>
+            </div>
+            <br />
+            <div class="form-group">
+              <label for="email"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+              </svg>  Email</label>
+              <input
+              type="email"
+              class="form-control"
+              id="email"
+              name="email"
+              required
+              />
+            </div>
+            <br />
+            <button type="button" class="btn btn-primary" id="submit">Submit</button>
+        </div>
+      </div>
+      </form>
+
+      <!-- ====취소=============================================== -->
+      <br><br>
+      <p style="font-size : 20px;">
+        여기에서 알림메일 구독을 취소할 수 있습니다. 취소는 한 항목씩만 가능합니다.
+      </p>
+      <hr>
+      <div class="row">
+        <div class="col-3">
+          <table class="table table-striped rounding" id="cancel">
+            <tr>
+              <td>학점교류</td>
+            </tr>
+            <tr>
+              <td>등록금</td>
+            </tr>
+            <tr>
+              <td>전공</td>
+            </tr>
+            <tr>
+              <td>졸업</td>
+            </tr>
+            <tr>
+              <td>셔틀버스</td>
+            </tr>
+            <tr>
+              <td>수강</td>
+            </tr>
+          </table>
+        </div>
+        <div class="col-9">          
+          <form method="post">
+            <div class="radio form-check row">
+              <label class="form-check-label col-2">
+              <input class="form-check-input" type="radio" name="keyword" value="학점교류" /> 학점교류</label>
+              <label class="form-check-label col-2"><input class="form-check-input" type="radio" name="keyword" value="등록금" /> 등록금</label>
+              <label class="form-check-label col-2"><input class="form-check-input" type="radio" name="keyword" value="전공" /> 전공</label>
+              <label class="form-check-label col-2"><input class="form-check-input" type="radio" name="keyword" value="졸업" /> 졸업</label>
+              <label class="form-check-label col-2"><input class="form-check-input" type="radio" name="keyword" value="셔틀버스" /> 셔틀버스</label>
+              <label class="form-check-label col-2"><input class="form-check-input" type="radio" name="keyword" value="수강" /> 수강</label>
+            </div>
+            <br />
+            <div class="form-group">
+              <label for="email_2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+              </svg> Email</label>
+              <input
+              type="email"
+              class="form-control"
+              id="email_cancel"
+              name="email_2"
+              required
+              />
+              <br />
+              <button type="button" class="btn btn-primary" id="cancel_button">Submit</button>
+            </div>
+        </div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="check.js"></script>
+    </div>
+  </body>
+</html>

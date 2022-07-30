@@ -1,0 +1,5 @@
+mail_sending/config/senderInfo.json
+mail_sending/config/secret.js
+mail_sending/node_modules/*
+mail_sending/prisma/*
+crawl/.env

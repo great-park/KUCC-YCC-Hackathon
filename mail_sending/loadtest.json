@@ -1,0 +1,33 @@
+{
+    "config": {
+        "target": "http://localhost:3001",
+        "phases": [
+            {
+                "duration": 30,
+                "arrivalRate": 1000,
+                "name" : "2 example request"
+            }
+        ]
+    },
+    "scenarios": [
+        {
+            "flow": [
+                {
+                    "post": {
+                    "url": "/email",
+                    "json": {
+                        "email" : "test@mdmsmsdm.com",
+                        "keyword" : "전공"
+                        }
+                    }
+                },
+                {
+                    "get": {
+                    "url": "/users"
+                    }
+                }
+            ]
+        }
+    ]
+}
+    
